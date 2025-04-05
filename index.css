@@ -1,0 +1,587 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); 
+  color: #222;
+  min-height: 100vh;
+} 
+  /* ====== Navbar Start ====== */
+  .ultra-navbar {
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  .ultra-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1abc9c;
+    text-shadow: 0 0 8px rgba(26, 188, 156, 0.6);
+    letter-spacing: 2px;
+    transition: transform 0.4s ease;
+  }
+
+  .ultra-text:hover {
+    transform: scale(1.1);
+  }
+
+  .ultra-nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  .ultra-nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .ultra-nav-links a.active::after {
+    width: 100%;
+  }    
+  .ultra-nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #1abc9c, #0fd3b5);
+    box-shadow: 0 0 10px #1abc9c;
+    transition: width 0.4s ease;
+    border-radius: 50px;
+  }
+
+  .ultra-nav-links a:hover::after {
+    width: 100%;
+  }
+  .ultra-nav-links a:hover {
+    color: inherit !important;
+  }  
+  .ultra-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .ultra-menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #1abc9c;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+  }
+
+  @media (max-width: 900px) {
+    .ultra-nav-links {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px 25px;
+      width: 90%;
+      max-width: 350px;
+      border-radius: 20px;
+      display: none;
+      animation: dropFade 0.5s ease;
+    }
+
+    .ultra-nav-links.active {
+      display: flex;
+    }
+
+    .ultra-menu-toggle {
+      display: flex;
+    }
+  }
+
+  @keyframes dropFade {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .ultra-menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .ultra-menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .ultra-menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  /* ====== Navbar End ====== */
+.info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 1; 
+  transform: translateY(0px); 
+  transition: 0.5s;
+}
+.card-body {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+      .container {
+          max-width: 100%;
+          overflow: hidden;
+      } 
+      .banner {
+          display: flex;
+          gap: 20px;
+      }
+      .banner img, .banner video {
+          max-width: 100%;
+          height: 300px;
+          width: 900px;
+          margin: 10px;
+      }
+      .welcome {
+          text-align: center;
+      }
+      .card {
+          width: 280px;
+          height: 360px;
+          border-radius: 15px;
+          padding: 1.5rem;
+          background: white;
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          transition: 0.4s ease-out;
+          box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+      }
+      .card:hover {
+          transform: translateY(20px);
+      }
+      .card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 15px;
+      }
+      .info {
+          position: relative;
+          z-index: 3;
+          color: white;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: 0.5s;
+      }
+      .card:hover .info {
+          opacity: 1;
+          transform: translateY(0px);
+      }
+      .info h1 {
+          margin: 0;
+      }
+      .info p {
+          font-size: 15px;
+      }
+      .info button {
+          padding: 0.6rem;
+          border: none;
+          border-radius: 3px;
+          background: white;
+          color: black;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.4s ease;
+      }
+      .info button:hover {
+          background: dodgerblue;
+          color: white;
+      }
+      .cards-container {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 50px;
+      }
+      .image{
+        position: relative;
+        left: 80px;
+      }
+      span{
+        color:  #149279;
+      }
+      .main{
+        color:  #149279;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+      }
+      .cards-container {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 20px; 
+  margin-top: 50px;
+  padding: 0 20px; 
+}
+.container {
+  max-width: 100%;
+  padding: 0 30px; 
+}
+.card {
+  width: 100%;
+  max-width: 280px;
+  margin: 10px auto;
+}
+@media (max-width: 450px) {
+#intro {
+  height: 950px !important;
+}
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+#intro {
+  height: 1100px !important;
+}
+}
+
+@media (min-width: 800px) and (max-width: 990px) {
+#intro {
+  height: 600px !important;
+}
+}
+
+.display-1 {
+font-weight: 500 !important;
+letter-spacing: 40px;
+}
+
+@media (min-width: 1600px) {
+.display-1 {
+  font-size: 10rem;
+}
+}
+.hero-slider {
+  height: 100vh;
+  margin-top: 76px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: transform 0.5s;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  width: 90%;
+}
+
+.slide-title {
+  font-size: 4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #61ccb7;
+  text-shadow: 0 0 8px rgba(94, 255, 223, 0.6);
+  letter-spacing: 2px;
+  transition: transform 0.4s ease;
+}
+
+/* Additional Slides Content */
+.slide-number {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 700;
+}
+
+.slide-description {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Wonders Grid Section */
+.wonders-grid {
+  padding: 6rem 0;
+  background: white;
+}
+
+.wonder-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.wonder-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  /* background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .slide-title {
+      font-size: 2.5rem;
+  }
+  
+  .hero-slider {
+      height: 60vh;
+  }
+}
+.hero-slider {
+  height: 100vh;
+  margin-top: 0;
+}
+.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.image-container {
+  position: relative;
+  width: 45%; 
+  height: 400px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.colosseum-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
+  display: block;
+}
+.ChichénItzá-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 8px;
+}
+.gap-4 {
+  gap: 30px;
+}
+/* for video start */
+.container.banner {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 10px;
+}
+.section-heading {
+  color:  #149279;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+.section-subheading {
+  text-align: center;
+  font-family: 'Orbiton', sans-serif;
+}
+/* for video end */
+/* adver cards start */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f9f8;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #149279;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-adver {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-adver:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.icon-section i {
+  font-size: 4.5rem;
+  color: #70b4c5;
+  margin-bottom: 15px;
+}
+
+.travel-title {
+  font-size: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #149279;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .card-adver {
+    width: 90%;
+  }
+}
+/* adver cards end */
+   /* ======= Footer Styles ======= */
+   .footer {
+    background: linear-gradient(to right, #45a894, #3b9c8e);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #1abc9c;
+  }
+  
+      /* footer end */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback 7 Wonders</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="shortcut icon" href="Images/logo-removebg-preview.png" type="image/png"> 
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+  <center>
+    <header>
+      <img src="Images/logo-removebg-preview.png" alt="" height="130px" width="250px">
+    </header>
+  </center>
+  <!-- Navbar start -->
+  <header class="ultra-navbar">
+    <div class="ultra-logo">7 Wonders</div>
+    <nav class="ultra-nav-links" id="ultra-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact</a>
+      <a href="site_map.html">SiteMap</a>
+    </nav>
+    <div class="ultra-menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+<!-- Navbar End -->
+
+
+  <!-- Page Content -->
+   <div class="container">
+    <!-- feedback form start -->
+    <div class="feedback-box">
+      <h2 class="main"><i>Give Your Feedback</i></h2>
+      <div class="star-rating">
+        <input type="radio" name="rating" id="star5"><label for="star5">&#9733;</label>
+        <input type="radio" name="rating" id="star4"><label for="star4">&#9733;</label>
+        <input type="radio" name="rating" id="star3"><label for="star3">&#9733;</label>
+        <input type="radio" name="rating" id="star2"><label for="star2">&#9733;</label>
+        <input type="radio" name="rating" id="star1"><label for="star1">&#9733;</label>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required pattern="[A-Za-z0-9]+" title="Only letters and numbers allowed">
+        <input type="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <textarea rows="5" placeholder="Your Feedback" required pattern="[A-Za-z0-9]+" title="Only letters and numbers allowed"></textarea>
+        <button type="submit"><i>Submit</i></button>
+      </form>
+    </div>
+<!-- feedback form end -->
+ <!-- FAQs start -->
+ <div class="wrapper">
+  <div class="main-title"><i>Frequently Asked Questions</i></div>
+
+  <input type="radio" id="radio1" name="accordion" checked>
+  <div class="item">
+    <label class="title" for="radio1"><i>What are the Seven Wonders of the World?</i></label>
+    <div class="content">
+      <i>The Seven Wonders of the World are a list of the most remarkable human-made structures across the globe. The modern list includes the Great Wall of China, Petra, Christ the Redeemer, Machu Picchu, Chichen Itza, the Roman Colosseum, and the Taj Mahal.</i>
+    </div>
+  </div>
+
+  <input type="radio" id="radio2" name="accordion">
+  <div class="item">
+    <label class="title" for="radio2"><i>Why are these places called "Wonders"?</i></label>
+    <div class="content">
+      <i>These places are called "Wonders" because of their extraordinary architecture, cultural significance, and historical value. They represent human achievement and creativity at its finest.</i>
+    </div>
+  </div>
+
+  <input type="radio" id="radio3" name="accordion">
+  <div class="item">
+    <label class="title" for="radio3"><i>Can I visit all Seven Wonders in one trip?</i></label>
+    <div class="content">
+      <i>While it is possible to visit all Seven Wonders, it requires careful planning, time, and budget, as they are located in different countries across several continents.</i>
+    </div>
+  </div>
+
+  <input type="radio" id="radio4" name="accordion">
+  <div class="item">
+    <label class="title" for="radio4"><i>Which is the most visited Wonder of the World?</i></label>
+    <div class="content">
+      <i>The Great Wall of China and the Colosseum in Rome are among the most visited Wonders due to their popularity and accessibility.</i>
+    </div>
+  </div>
+
+  <input type="radio" id="radio5" name="accordion">
+  <div class="item">
+    <label class="title" for="radio5"><i>Who selected the modern Seven Wonders of the World?</i></label>
+    <div class="content">
+      <i>The modern list was chosen through a global poll organized by the New7Wonders Foundation in 2007, where people from all over the world voted for their favorite sites.</i>
+    </div>
+  </div>
+</div>
+</div>
+  <!-- FAQs end -->
+      <!-- ======= Footer Start ======= -->
+      <footer class="footer mt-3">
+        <div class="footer-container">
+          <p>&copy; 2025 Seven Wonders | All Rights Reserved</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </footer>
+      <!-- ======= Footer End ======= -->
+  <script>
+
+    //js for navbar start
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('ultra-nav');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+    // for navbar underline start
+    const links = document.querySelectorAll('.ultra-nav-links a');
+  const currentPage = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+    // for navbar underline end
+    //js for navbar end
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+    

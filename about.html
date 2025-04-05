@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonders Of World</title>
+    <link rel="stylesheet" href="about.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="Images/logo-removebg-preview.png" type="image/png"> 
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <center>
+      <header>
+        <img src="Images/logo-removebg-preview.png" alt="" height="130px" width="250px">
+      </header>
+    </center>
+      <!-- Navbar -->
+  <header class="ultra-navbar">
+    <div class="ultra-logo">7 Wonders</div>
+    <nav class="ultra-nav-links" id="ultra-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact</a>
+      <a href="site_map.html">SiteMap</a>
+    </nav>
+    <div class="ultra-menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+<!-- Navbar End -->
+  <!-- About page banner start -->  
+   <div id="about-page-banner">
+    <div id="about-gradient-banner">
+      <div id="about-banner-content">
+        <h1><i>About Us</i></h1>
+        <h2><i>Exploring the Legacy of the Seven Wonders</i></h2>
+      </div>
+    </div>
+   </div>
+   <div id="about-page-content">
+    <div class="container">
+      <div id="about-section1">
+        <div class="row">
+          <h1 class="about-section-heading">
+            <i>Who Are We</i>
+           </h1>
+           <div class="border-line"></div>
+        </div>
+        <div class="row">
+          <p class="about-text">
+            <i>We are passionate explorers, storytellers, and admirers of the world’s most breathtaking landmarks. Seven Wonders is a dedicated platform that celebrates the beauty, history, and mystery behind the greatest wonders of the world.
+              <br><br></i>
+            <i>From the ancient marvels to modern masterpieces, our goal is to bring you closer to these iconic destinations — not just through facts, but through unforgettable stories, visuals, and immersive experiences. Whether you're a traveler, a history enthusiast, or simply curious, Seven Wonders is your gateway to the extraordinary.</i>
+           </p>
+        </div>
+     </div>
+    </div>
+    <div class="container">
+      <div id="about-section2">
+        <div class="col">
+          <div id="about-section2-text">
+            <h1 class="about-section-heading">
+              <i>What We Do </i>
+            </h1>
+            <div class="border-line"></div>
+            <p class="about-text">
+             <i> At Seven Wonders, we bring iconic landmarks to life with captivating insights, fascinating facts, and stunning visuals. Explore their history, cultural significance, and timeless beauty through rich content and inspiring storytelling.</i>
+            </p>
+          </div>
+        </div>
+        <div class="col-image">
+          <div id="about-section2-image">
+            <img src="images/pexels-bert-mulder-2147508541-29662427.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-section3">
+      <h1 class="about-section-heading">Our Founders</h1>
+      <h2>Meet Our Team</h2>
+      <div id="about-founders-container">
+    
+        <!-- Founder 1 -->
+        <div class="about-founders-box">
+          <div class="about-founders-shape">
+            <img src="images/boy3.avif" width="100%">
+          </div>
+          <div class="about-founders-text">
+            <br>
+            <p class="about-founders-name"><i>Adam Raza</i></p>
+            <p class="about-founders-position"><i>Team Coordinator</i><p>
+          </div>
+        </div>
+    
+        <!-- Founder 2 -->
+        <div class="about-founders-box">
+          <div class="about-founders-shape">
+            <img src="images/face.png" width="100%">
+          </div>
+          <div class="about-founders-text">
+            <br>
+            <p class="about-founders-name"><i>Sana Mirza</i></p>
+            <p class="about-founders-position"><i>Design Director</i></p>
+          </div>
+        </div>
+    
+        <!-- Founder 3 -->
+        <div class="about-founders-box">
+          <div class="about-founders-shape">
+            <img src="images/boy2.png" width="100%">
+          </div>
+          <div class="about-founders-text">
+            <br>
+            <p class="about-founders-name"><i>Zayan Ali</i></p>
+            <p class="about-founders-position"><i>Technical Developer</i></p>
+          </div>
+        </div>
+    
+      </div>
+    </div>    
+   </div>
+   <!-- About page banner end -->
+       <!-- ======= Footer Start ======= -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Seven Wonders | All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+<!-- ======= Footer End ======= -->
+ <script>
+  // for navbar underline start
+  const links = document.querySelectorAll('.ultra-nav-links a');
+  const currentPage = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+    // for navbar underline end
+ </script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

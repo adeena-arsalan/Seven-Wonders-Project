@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-Us 7 Wonders</title>
+    <link rel="stylesheet" href="contact.css"/>
+    <link rel="shortcut icon" href="Images/logo-removebg-preview.png" type="image/png"> 
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+  <body>
+    <center>
+      <header>
+        <img src="Images/logo-removebg-preview.png" alt="" height="130px" width="250px">
+      </header>
+    </center>
+    <!-- Navbar -->
+    <header class="ultra-navbar">
+      <div class="ultra-logo">7 Wonders</div>
+      <nav class="ultra-nav-links" id="ultra-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+        <a href="site_map.html">SiteMap</a>
+      </nav>
+      <div class="ultra-menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+  <!-- Navbar End -->
+ <!-- contact us data start -->
+  <br><br><br>
+    <div class="container">
+      <!-- <span class="big-circle"></span> -->
+      <div class="form">
+        <div class="contact-info">
+        <div class="google_map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3139939516886!2d67.14721147262756!3d24.887269095389076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339999415e0c3%3A0x36742eee0fd9c291!2sAptech%20Metro%20Star%20Gate!5e0!3m2!1sen!2s!4v1741581519956!5m2!1sen!2s" width="330" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.google.com/maps/place/Aptech+Metro+Star+Gate" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #296a45;"></i>
+              </a>
+              <a href="tel:+923001234567">
+                <i class="fa-solid fa-phone"  style="color: #296a45;"></i>
+              </a>
+              <a href="mailto:wonders_the_world@email.com">
+                <i class="fa-solid fa-envelope" style="color: #296a45;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="" >
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" required pattern="[A-Za-z0-9]+" title="Only letters and numbers allowed"/>
+              <label for="">Username</label>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
+              <label for="">Email</label>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required  pattern="03[0-9]{2}-[0-9]{7}" title="Format: 03XX-XXXXXXX" />
+              <label for="">Phone</label>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" minlength="10"></textarea>
+              <label for="">Message</label>
+            </div>
+            <input type="submit" value="Send" class="btn"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- contact us data end -->
+        <!-- ======= Footer Start ======= -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Seven Wonders | All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+<!-- ======= Footer End ======= -->
+    <script>
+      const inputs = document.querySelectorAll(".input");
+      function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+      }
+      function blurFunc() {
+        let parent = this.parentNode;
+        if (this.value == "") {
+          parent.classList.remove("focus");
+        }
+      }
+      inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+      });
+      // js for navbar start
+      const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('ultra-nav');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+    // for navbar underline start
+    const links = document.querySelectorAll('.ultra-nav-links a');
+  const currentPage = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+    // for navbar underline end
+      // js for navbar end
+      //geocation start
+      navigator.geolocation.getCurrentPosition(
+  function (position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    document.getElementById("output").textContent = `Latitude: ${lat}, Longitude: ${lng}`;
+    new google.maps.Map(document.getElementById("map"), {
+      center: { lat, lng },
+      zoom: 15,
+    }).setCenter({ lat, lng });
+    new google.maps.Marker({ position: { lat, lng }, map: map });
+  },
+  function (error) {
+    document.getElementById("output").textContent = "Location error: " + error.message;
+  }
+);
+      //geolocation end
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
